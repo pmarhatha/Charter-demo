@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: Undeploy HelloWorld to JBoss
+    jboss: deploy_path=/usr/share/jboss-as/standalone/deployments/ src=/tmp/jboss-helloworld.war deployment=helloworld.war state=absent
+  - name: Undeploy Ticket Monster to JBoss
+    jboss: deploy_path=/usr/share/jboss-as/standalone/deployments/ src=/tmp/ticket-monster.war deployment=ticket-monster.war state=absent
+
+
+
